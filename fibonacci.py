@@ -1,5 +1,5 @@
 def fibonacci():
-    num = int(input("Please enter how many numbers would you like in your Fibonacci sequence: "))
+    num = int(input("How many numbers would you like in your Fibonacci sequence: "))
     i = 1
     if num == 0:
         fib = []
