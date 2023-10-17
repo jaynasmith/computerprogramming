@@ -1,5 +1,3 @@
-input_message = input("What is the message? ")
-
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
     'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
@@ -8,3 +6,16 @@ morse_dict = {
     '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.', '.': '.-.-.-', ',': '--..--',
     '?': '..--..', '!': '-.-.--', '/': '-..-.', '(': '-.--.', ')': '-.--.-', ':': '---...', ';': '-.-.-.',
      '=': '-...-', '+': '.-.-.', '-': '-....-', '_': '..--.-', '"': '.-..-.',' ': '/'}
+
+input_message = input("What is the message? ")
+
+def to_morse_code(message):
+    morse_code = ''
+    for char in message:
+        if char == ' ':
+            morse_code += '  '
+        else:
+            morse_code += morse_dict[char.upper()] + ' '
+    print(morse_code)
+
+to_morse_code(input_message)
