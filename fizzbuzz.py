@@ -1,18 +1,12 @@
 user_number = int(input("Pick a number_"))
 
-for i in range(1,101):
-    if (i % 3 == 0):
-        print("Fizz")
-    if (i % 5 == 0):
-        print("Buzz")
-    if (i % 3 == 0) and (i % 5 == 0):
+for i in range(1,100):
+    if (i % user_number == 0):
+        print("Hug")
+    elif (i % 3 == 0) and (i % 5 == 0):
         print("FizzBuzz")
+    elif (i % 3 == 0):
+        print("Fizz")
+    elif (i % 5 == 0):
+        print("Buzz")
 print(i)
-
-if (i % user_number == 0):
-        print("Fuzz")
-
-
- 
-
-
