@@ -1,0 +1,5 @@
+Q1 = int(input("What is your first and last name?"))
+Q2 = int(input("Why do you want this job?"))
+Q3 = int(input("How Long have you been coding"))
+Q4 = int(input("What type of coding are you interested in?"))
+Q5 = int(input(""))
