@@ -37,15 +37,40 @@ print("You did.")
 time.sleep(3)
 print("")
 print("Now you're stuck in the middle and can't find your way out. ")
+print("")
+
+hp = 100
+inventory = []
+inputs = ['w' , 'i']
+
+def attack_ememy(player_health, enemy health):
+    
+
+
+
 
 while True:
+        
     walk_input = input("Press 'w' to walk or 'i' to see inventory. ")
     if walk_input == 'w':
-        print("Just keep walking! You'll get there!")
-        time.sleep(1.5)
-        print("")
-        print("probably.")
-        time.sleep(1.5)
-        print("")
+
+        if random.randint(1, 3) == 1:
+            if random.randint(1, 3) == 1:
+                print("You've run into a moving skeleton!")
+                time.sleep(1.5)
+                print("")
+            elif random.randint(1, 3) == 2:
+                print("You've ran into a walinhg shark!")
+                time.sleep(1.5)
+                print("")
+            else:
+                print("You've run into your dissapointed dad!") 
+                time.sleep(1.5)
+                print("")
+        else:
+            print("Just keep walking! You'll get there!")
+            time.sleep(1.5)
+            print("")
     elif walk_input == 'i':
-        print()
+        print(f"Your have {hp} health and {inventory} in your inventory.")
+    
