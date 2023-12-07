@@ -39,15 +39,30 @@ print("")
 print("Now you're stuck in the middle and can't find your way out. ")
 print("")
 
-hp = 100
+player_health = 100
+enemy_health = 75
 inventory = []
 inputs = ['w' , 'i']
 
 def attack_ememy(player_health, enemy health):
-    
+    while True:
+        if player_health > 0:
+            your_attack = random.randint(10, 100)
+            print(f"You attacked the enemy for {your_attack} damage!")
+            enemy_health -= your_attack
 
+        if enemy_health > 0:
+            your_attack = random.randint(10, 100)
+            print(f"The enemy attacked you for {your_attack} damage!")
+            enemy_health -= your_attack
 
-
+        if player_health <= 0:
+            print("You die and become an obstical for the next traveler")
+            break
+        elif enemy_health <= 0:
+            print("The villain dies by your hand!")
+            print("You have earned 25 health and an item in you inventory!")
+            break
 
 while True:
         
@@ -57,16 +72,16 @@ while True:
         if random.randint(1, 3) == 1:
             if random.randint(1, 3) == 1:
                 print("You've run into a moving skeleton!")
-                time.sleep(1.5)
                 print("")
+                time.sleep(1.5)
             elif random.randint(1, 3) == 2:
                 print("You've ran into a walinhg shark!")
-                time.sleep(1.5)
                 print("")
+                time.sleep(1.5)
             else:
                 print("You've run into your dissapointed dad!") 
-                time.sleep(1.5)
                 print("")
+                time.sleep(1.5)
         else:
             print("Just keep walking! You'll get there!")
             time.sleep(1.5)
